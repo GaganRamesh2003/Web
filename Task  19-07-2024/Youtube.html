@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-like Page</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #181818;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+        }
+        .navbar .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .left-section img {
+            width: 90px;
+            margin-right: 20px;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            size: 150;
+            outline: none;
+        }
+        .navbar .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            background-color: #cbcbcb;
+            color: #fff;
+        }
+        .navbar .search-bar button {
+            padding: 10px;
+            border: none;
+            
+            border-radius: 0 25px 25px 0;
+            background-color: #ffb7b7;
+            color: #fff;
+            cursor: pointer;
+        }
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .icons img {
+            width: 24px;
+            height: 24px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+        .video-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .channel-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #b0b0b0;
+            border-radius: 10px;
+        }
+        .channel-info .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .channel-info .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .channel-info .subscribe-btn {
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            padding: 10px 16px;
+            border-radius: 25px  25px 25px 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .channel-info .actions {
+            display: flex;
+            align-items: center;
+        }
+        .channel-info .actions img {
+            width: 24px;
+            height: 24px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+      
+        .sidebar {
+            flex: 1;
+            background-color: #212121;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sidebar .video {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar .video-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sidebar .video-info h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+        .sidebar .video-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left-section">
+            <img src="youtube.png" style="height:40px ; width: 40px;" alt="YouTube Logo">
+            <div class="search-bar">
+                <input id="search" placeholder="Search" size="150" style="outline: none;">
+                <button><img style="height: 15px; width: 15px;" src="magnifying-glass.png" alt="Search Icon"></button>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="video.png" alt="Upload Icon">
+            <img src="notification.png" alt="Notification Icon">
+            <img src="profile.png" alt="Profile Icon">
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <div class="video-container">
+                <iframe style="border: none; border-radius:  15px  15px 15px 15px;" width="100%" height="500px" src="https://www.youtube.com/embed/eCE6n0XfJ2o?si=umQRiVi-VHQsiOsp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
+                      </div>
+                      <div class="video-info">
+                        <h4>ARAMBHA SONG || Bramachari || Sathish Ninasam ||</h4>
+                        
+                    </div>
+            <div class="channel-info">
+                <div class="left-section">
+                    <img class="profile-pic" src="Anand.png" alt="Profile Picture">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="font-weight: bold;">Anand Audio</div>
+                        <div style="font-size: 14px;color: #ffffff;">12.4M subscribers</div>
+                    </div>
+                </div>
+                <button class="subscribe-btn">Subscribe</button>
+                <div class="actions">
+                    <img src="like.png" alt="Like Icon">
+                    <span style="  margin-left: 5px;margin-right: 15px;">919K</span>
+                    <img src="dont-like.png" alt="Dislike Icon">
+                    <img src="share.png" alt="Share Icon">
+                    <img src="more.png" alt="More Icon">
+                </div>
+            </div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="video" >
+                <iframe style="border-radius: 10px  10px 10px 10px;" width="168" height="94"  src="https://www.youtube.com/embed/ojNVwnwi0y0?si=16aD5u_O2MH63rhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                     <div class="video-info">
+                    <h4>TANGALI TANDEYA || LOVE GURU ||</h4>
+                    <p> 627K views</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe style="border-radius: 10px  10px 10px 10px;" width="168" height="94"  src="https://www.youtube.com/embed/J2rQCuKOwC4?si=ky7VbNfJZg_dSL1d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <div class="video-info">
+                    <h4>NADEDADUVA KAMANABILLU || PARICHAYA MOVIE</h4>
+                    <p> 5.7M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe style="border-radius: 10px  10px 10px 10px;" width="168" height="94"  src="https://www.youtube.com/embed/hfgGznwwoq0?si=oIFn2zzSnwpJAttV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <div class="video-info">
+                    <h4>THANTHANE THANAMTHANE || JOSH MOVIE</h4>
+                    <p> 45M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe style="border-radius: 10px  10px 10px 10px;" width="168" height="94" src="https://www.youtube.com/embed/buKOl_cqgIM?si=SywEstg9OdEJOfm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-info">
+                    <h4>MARETHE HODENU || DAYAVITTU GAMANISU |</h4>
+                    <p> 20M views</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe style="border-radius: 10px  10px 10px 10px;" width="168" height="94" src="https://www.youtube.com/embed/tlGXnBnIa4k?si=2TRd2x6BmKKwLbz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <div class="video-info">
+                    <h4>HUDUGI HUDUGI || AISHWARYA MOVIE</h4>
+                    <p>4.1M views</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
